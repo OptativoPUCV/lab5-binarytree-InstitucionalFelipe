@@ -1,0 +1,15 @@
+Thu 09 May 2024 03:48:22 PM UTC: 
+ treemap.c | 33 ++++++++++++++++++++++++++++++---
+ 1 file changed, 30 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:64:16: error: variable ‘parent’ set but not used [-Werror=unused-but-set-variable]
+   64 |     TreeNode * parent = NULL;
+      |                ^~~~~~
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:114:1: error: control reaches end of non-void function [-Werror=return-type]
+  114 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+8953d94
