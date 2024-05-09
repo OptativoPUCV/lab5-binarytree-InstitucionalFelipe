@@ -94,3 +94,13 @@ Thu 09 May 2024 04:01:50 PM UTC:
  tests:  14|4
 total_score: 20/70
 4edc2fb
+Thu 09 May 2024 04:09:33 PM UTC: 
+ treemap.c | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:158:1: error: expected ‘;’ before ‘}’ token
+  158 | }
+      | ^
+Compilation failed
+8e4acd3
