@@ -168,9 +168,32 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-    return NULL;
+    if(tree == NULL || tree->root == NULL) return NULL;
+
+    TreeNode *node = tree->root;
+    while (node->left != NULL){
+        node = node->left;
+    }
+    tree->current = node;
+    return node->pair;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+    if(tree == NULL || tree->root == NULL) return NULL;
+    
+    TreeNode *node = tree->current;
+    if(node->right != NULL){
+        node = node->right;
+        while (node->left != NULL){
+            node = node->left;
+        }
+    }
+    else{
+        while(node->parent != NULL && node->parent->right == node){
+            node = node->parent;
+        }
+        node = node->parent;
+    }
+    tree->current = node;
+    return (node == NULL) ? NULL : node->pair;
 }
